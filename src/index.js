@@ -1,13 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom";
-//import { BrowserRouter } from 'react-router-dom';
 import "./index.css";
-import App from "./assets/App.jsx";
+import App from "./assets/App";
+//import reportWebvitals frpm "./reportWevitales"
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <App />
-  </React.StrictMode>,
-  document.getElementById("root")
+  </React.StrictMode>
+  //document.getElementById("root")
 );
