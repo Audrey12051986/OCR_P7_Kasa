@@ -1,7 +1,7 @@
-import React from "react";
+/*import React from "react";
 import ReactDOM from "react-dom";
-import "./index.css";
-import App from "./assets/App";
+import "../styles/index.scss";
+import App from "./components/App";
 //import reportWebvitals frpm "./reportWevitales"
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -10,4 +10,16 @@ root.render(
     <App />
   </React.StrictMode>
   //document.getElementById("root")
+);*/
+
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "../src/styles/scss/index.scss";
+import App from "./components/App.js";
+
+//const root = ReactDOM.createRoot(document.getElementById("root"));
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
 );
