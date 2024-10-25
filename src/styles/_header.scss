@@ -1,0 +1,50 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 100px;
+
+  &__logo {
+    height: 68px;
+
+    @include mobile-only {
+      height: 46px;
+    }
+
+    &:hover {
+      transform: scale(1.02);
+      transition: all 0.5s ease-in-out;
+      cursor: pointer;
+    }
+  }
+
+  @include mobile-only {
+    padding: 20px;
+  }
+
+  @include tablet-only {
+    padding: 50px;
+  }
+}
+
+.navbar {
+  display: flex;
+  font-weight: 500;
+  font-size: 24px;
+  align-items: center;
+  gap: 55px;
+
+  @include mobile-only {
+    font-size: 12px;
+    text-transform: uppercase;
+    gap: 15px;
+  }
+
+  &__button {
+    color: $primary-color;
+
+    &--selected {
+      text-decoration-line: underline;
+    }
+  }
+}
