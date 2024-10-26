@@ -1,8 +1,6 @@
 import React from "react";
 import Logo from "../assets/logo.png";
-/*import Navbar from "./Navbar";
-
-import { Link } from "react-router-dom";*/
+import { NavLink } from "react-router-dom";
 
 /**
  * Ce composant Header affiche le logo de l'entreprise et une barre de navigation en haut de la page.
@@ -28,11 +26,21 @@ import { Link } from "react-router-dom";*/
 function Header() {
   return (
     <div className="header">
-      <img src={Logo} alt="logo" />
+      <img src={Logo} alt="logo" className="header__logo" />
       <nav>
         <ul>
-          <li>Accueil</li>
-          <li>A propos</li>
+          <NavLink
+            to="/"
+            className={({ isActive }) => (isActive ? "underline" : "")}
+          >
+            <li>Accueil</li>
+          </NavLink>
+          <NavLink
+            to="/about"
+            className={({ isActive }) => (isActive ? "underline" : "")}
+          >
+            <li>A propos</li>
+          </NavLink>
         </ul>
       </nav>
     </div>
