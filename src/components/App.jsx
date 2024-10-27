@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import HomePage from "../pages/HomePage"; // Chemin correct vers HomePage
+import HomePage from "../pages/Home"; // Chemin correct vers HomePage
 import AboutPage from "../pages/AboutPage"; // Chemin correct vers AboutPage
 import Header from "./Header"; // Chemin correct vers Header
 

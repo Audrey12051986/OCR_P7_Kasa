@@ -1,8 +1,9 @@
 .header {
   display: flex;
   justify-content: space-between;
+  margin-top: 45px;
   //align-items: center;
-  padding: 40px 100px;
+  //padding: 40px 100px;
 
   &__logo {
     height: 68px;
@@ -33,6 +34,9 @@
         text-decoration: none;
         color: black;
         &.underline {
+          text-decoration: underline;
+        }
+        &:hover {
           text-decoration: underline;
         }
       }
