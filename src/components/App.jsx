@@ -11,6 +11,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} /> {/* Page d'accueil */}
         <Route path="/about" element={<AboutPage />} /> {/* Page "À propos" */}
+        <Route path="location/:id" element={<Location />} />
       </Routes>
     </BrowserRouter>
   );

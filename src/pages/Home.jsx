@@ -1,13 +1,14 @@
 import React from "react";
-import homeBanner from "../assets/homeBanner.png";
+import Banner from "../components/Banner";
+import CardList from "../components/CardList";
+//import Card from "../components/Card";
+//import Rental from "../../src/data/logements.json";
 
 const HomePage = () => {
   return (
     <div className="home">
-      <section className="banner">
-        <img src={homeBanner} alt="Home Banner" />
-        <h1>Chez vous, partout et ailleurs</h1>;
-      </section>
+      <Banner />
+      <CardList />
     </div>
   );
 };
