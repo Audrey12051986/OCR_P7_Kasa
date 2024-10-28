@@ -1,7 +1,6 @@
 import React from "react";
 import Banner from "../components/Banner";
 import CardList from "../components/CardList";
-//import Card from "../components/Card";
 //import Rental from "../../src/data/logements.json";
 
 const HomePage = () => {
