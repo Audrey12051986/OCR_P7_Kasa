@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "_variables"; // où variables.scss contient la définition de $primary-color
 
 function Error() {
   return (

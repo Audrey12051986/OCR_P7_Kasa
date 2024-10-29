@@ -1,3 +1,5 @@
+$primary-color: #ff6060;
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -54,11 +56,11 @@
   align-items: center;
   gap: 55px;
 
-  @include mobile-only {
+  /*@include mobile-only {
     font-size: 12px;
     text-transform: uppercase;
     gap: 15px;
-  }
+  }*/
 
   &__button {
     color: $primary-color;

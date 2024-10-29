@@ -1,8 +1,17 @@
-@import "_body";
+/*@import "_body";
 @import "_mixins";
 @import "_variables";
 @import "_errorPage";
 @import "_home";
 @import "_header";
-@import "_footer";
+@import "_footer";*/
 //@import "_card";
+
+@use "../styles/mixins";
+@use "../styles/variables";
+@use "../styles/pages/home";
+@use "../styles/pages/errorPage";
+@use "../styles/components/body";
+@use "../styles/components/_card.sass";
+@use "../styles/components/header";
+@use "../styles/components/footer";

@@ -4,6 +4,7 @@ import HomePage from "../pages/Home"; // Chemin correct vers HomePage
 import AboutPage from "../pages/AboutPage"; // Chemin correct vers AboutPage
 import Header from "./Header"; // Chemin correct vers Header
 import Footer from "./Footer";
+import "../styles/index.scss";
 
 /* <Route path="location/:id" element={<Location />} />*/
 
@@ -21,5 +22,3 @@ function App() {
 }
 
 export default App;
-
-/*{ Ajouter le Header ici si tu veux qu'il apparaisse sur toutes les pages }*/
