@@ -2,17 +2,22 @@ $primary-color: #ff6060;
 
 .error {
   display: flex;
-  flex-flow: column nowrap;
+  flex-direction: column;
+  gap: 139px;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 50px 0;
   color: $primary-color;
+  margin-top: 139px;
 
   &__title {
     font-size: 288px;
     font-weight: 700;
-    margin: 40px 0;
+    height: 263px;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    color: $primary-color;
 
     /* @include mobile-only {
       font-size: 96px;
@@ -28,6 +33,7 @@ $primary-color: #ff6060;
   &__subtitle {
     font-weight: 500;
     font-size: 36px;
+    margin: 0;
 
     /*@include mobile-only {
       font-size: 18px;
@@ -43,9 +49,9 @@ $primary-color: #ff6060;
   &__link {
     text-decoration-line: underline;
     font-weight: 500;
-    font-size: 18px;
-    color: $primary-color;
-    margin-top: 180px;
+    font-size: 26px;
+    color: black;
+    margin-bottom: 180px;
 
     /* @include mobile-only {
       font-size: 14px;
