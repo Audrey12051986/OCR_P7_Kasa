@@ -1,0 +1,149 @@
+// _banner.scss
+/*.banner {
+  position: relative;
+  width: 100%;
+  height: 223px;
+  //margin: 20px 0;
+  border-radius: 25px;
+  overflow: hidden;
+
+  &--about {
+    height: 223px;
+
+    .banner__container {
+      background: rgba(0, 0, 0, 0.3);
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}*/
+
+// _header.scss
+/*.header {
+  max-width: 1240px;
+  //margin: 0 auto;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__logo {
+    height: 68px;
+
+    img {
+      height: 100%;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    gap: 57px;
+
+    a {
+      color: #ff6060;
+      text-decoration: none;
+      font-size: 24px;
+
+      &:hover,
+      &.active {
+        text-decoration: underline;
+      }
+    }
+  }
+}*/
+
+// _aboutPage.scss
+.about-page {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  .collapse {
+    margin: 31px auto;
+    max-width: 1023px;
+
+    &__visible {
+      background: #ff6060;
+      border-radius: 5px;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+
+      h2 {
+        color: white;
+        font-size: 24px;
+        font-weight: 500;
+      }
+
+      .chevron {
+        width: 24px;
+        height: 24px;
+        transition: transform 0.3s ease;
+
+        &.rotated {
+          transform: rotate(180deg);
+        }
+      }
+    }
+
+    &__toggle {
+      background: #f6f6f6;
+      border-radius: 0 0 5px 5px;
+      overflow: hidden;
+      transition: height 0.3s ease-in-out;
+
+      p {
+        padding: 20px;
+        color: #ff6060;
+        font-size: 18px;
+        line-height: 1.5;
+      }
+    }
+  }
+}
+
+/*@media (max-width: 768px) {
+  .banner {
+    height: 180px;
+    margin: 10px 0;
+  }
+
+  .header {
+    padding: 20px;
+
+    &__logo {
+      height: 45px;
+    }
+
+    &__nav {
+      gap: 20px;
+
+      a {
+        font-size: 16px;
+      }
+    }
+  }
+
+  .about-page {
+    .collapse {
+      &__visible h2 {
+        font-size: 18px;
+      }
+
+      &__toggle p {
+        font-size: 16px;
+      }
+    }
+  }
+}*/

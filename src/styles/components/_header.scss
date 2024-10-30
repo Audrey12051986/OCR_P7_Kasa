@@ -1,9 +1,11 @@
 $primary-color: #ff6060;
 
 .header {
+  max-width: 1240px;
   display: flex;
   justify-content: space-between;
   margin-top: 45px;
+  height: 68px;
 
   &__logo {
     height: 68px;
@@ -30,6 +32,10 @@ $primary-color: #ff6060;
   nav {
     ul {
       display: flex;
+      font-weight: medium;
+      font-size: 24px;
+      align-items: center;
+      gap: 55px;
       a {
         text-decoration: none;
         color: black;
@@ -49,30 +55,8 @@ $primary-color: #ff6060;
   }
 }
 
-.navbar {
-  display: flex;
-  font-weight: 500;
-  font-size: 24px;
-  align-items: center;
-  gap: 55px;
-
-  /*@include mobile-only {
-    font-size: 12px;
-    text-transform: uppercase;
-    gap: 15px;
-  }*/
-
-  &__button {
-    color: $primary-color;
-
-    &--selected {
-      text-decoration-line: underline;
-    }
-  }
-}
-
 /*.navbar {
-  display: flex;
+  /*display: flex;
   font-weight: 500;
   font-size: 24px;
   align-items: center;
@@ -91,5 +75,4 @@ $primary-color: #ff6060;
       text-decoration-line: underline;
     }
   }
-}
-*/
+}*/

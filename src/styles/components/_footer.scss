@@ -4,20 +4,22 @@ $footer-background-color: #000000;
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
+  justify-content: space-evenly;
   background-color: $footer-background-color;
-  padding: 30px 0;
-  margin-top: 100px;
+  height: 209px;
+  padding: 75px 0 0 0;
 
   /* @include mobile-only {
         margin-top: 50px;
     }*/
 
   &__img {
-    width: 120px;
-    margin: 30px 0;
+    width: 125px;
+    height: 40px;
   }
 
   &__text {
+    margin: 0;
     color: white;
     font-weight: 500;
     font-size: 24px;

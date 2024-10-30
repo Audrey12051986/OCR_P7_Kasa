@@ -2,6 +2,7 @@ $primary-color: #ff6060;
 $secondary-color: #fff;
 $background-color: #f6f6f6;
 $footer-background-color: #000000;
+$banner-overlay-color: rgba(0, 0, 0, 0.3);
 
 /*$breakpoints: (
   mobile: 767px,
@@ -9,11 +10,9 @@ $footer-background-color: #000000;
   desktop: 991px,
 );*/
 
-$banner-overlay-color: rgba(0, 0, 0, 0.3);
-
 // Breakpoints
-$breakpoints: (
+/*$breakpoints: (
   mobile: 768px,
   tablet: 992px,
   desktop: 1200px,
-);
+);*/
