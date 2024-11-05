@@ -1,36 +1,3 @@
-/*import React from "react";
-import { Star } from "lucide-react";
-
-/**
- * Composant Stars affiche une note avec un certain nombre d'étoiles pleines et vides.
- * @component
- * @param {Object} props
- * @param {number} props.rating - la valeur de la note (entre 0 et 5)
- * @returns {JSX.Element} - un div contenant les étoiles remplies et vides
- */
-
-/*const Stars = ({ rating }) => {
-  // Validation du rating entre 0 et 5
-  const validatedRating = Math.max(0, Math.min(5, rating));
-
-  return (
-    <div className="flex items-center">
-      {[...Array(5)].map((_, index) => (
-        <Star
-          key={index}
-          className={`w-5 h-5 ${
-            index < validatedRating ? "text-yellow-400" : "text-gray-300"
-          }`}
-          fill="currentColor"
-        />
-      ))}
-      <span className="ml-2 text-gray-600">({validatedRating}/5)</span>
-    </div>
-  );
-};
-
-export default Stars;*/
-
 import React from "react";
 import PropTypes from "prop-types";
 
