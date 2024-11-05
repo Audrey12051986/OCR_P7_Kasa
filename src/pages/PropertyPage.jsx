@@ -1,7 +1,8 @@
 import React from "react";
 import StarRating from "../components/StarRating";
-import logements from "../data/logements.json";
+//import logements from "../data/logements.json";
 import Tags from "../components/Tags";
+import Host from "../components/Host";
 
 //import Slideshow from "../components/SlideShows";
 //import TextSlider from "../components/TextSlider";
@@ -9,8 +10,9 @@ import Tags from "../components/Tags";
 const PropertyPage = () => {
   return (
     <div>
-      <StarRating rating={logements.rating} />
-      <Tags tags={logements.tags} />
+      <StarRating />
+      <Tags />
+      <Host />
     </div>
   );
 };
