@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { ChevronDown, ChevronUp } from "lucide-react";
+import PropTypes from "prop-types"; // Importation de PropTypes
+import { FaChevronUp, FaChevronDown } from "react-icons/fa";
 
 /**
  * Composant TextSlider affiche un titre et un texte/liste avec un bouton pour ouvrir/fermer.
@@ -10,7 +11,7 @@ import { ChevronDown, ChevronUp } from "lucide-react";
  * @param {string | string[]} props.text - Le contenu du composant, qui peut être du texte ou une liste de texte.
  * @returns {JSX.Element} - un composant dépliable
  */
-const TextSlider = ({ page, title, text }) => {
+const TextSlider = ({ title, text }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   // Vérifie si le texte est un tableau ou une chaîne
@@ -35,14 +36,29 @@ const TextSlider = ({ page, title, text }) => {
       >
         {title}
         {isOpen ? (
-          <ChevronUp className="w-5 h-5" />
+          <FaChevronUp className="w-5 h-5" />
         ) : (
-          <ChevronDown className="w-5 h-5" />
+          <FaChevronDown className="w-5 h-5" />
         )}
       </button>
       {isOpen && <div className="p-4 border-t">{renderText()}</div>}
     </div>
   );
+};
+
+// Définition des types de props avec PropTypes
+TextSlider.propTypes = {
+  page: PropTypes.string, // Prop optionnelle
+  title: PropTypes.string.isRequired, // Prop obligatoire
+  text: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.arrayOf(PropTypes.string),
+  ]).isRequired, // Texte obligatoire (chaîne ou tableau de chaînes)
+};
+
+// Définition des valeurs par défaut (si nécessaire)
+TextSlider.defaultProps = {
+  page: "", // Par défaut, page est une chaîne vide
 };
 
 export default TextSlider;

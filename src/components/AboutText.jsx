@@ -1,5 +1,5 @@
 import React from "react";
-import { textList } from "../data/TextList";
+import { textList } from "../data/text-list.json";
 import TextSlider from "./";
 
 const AboutText = () => {

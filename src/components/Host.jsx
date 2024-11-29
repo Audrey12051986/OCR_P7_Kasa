@@ -1,18 +1,20 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const Host = (props) => {
+const Host = ({ host }) => {
   return (
     <div className="host">
-      <span className="host__name">{props.name}</span>
-      <img src={props.picture} alt="Propriétaire" className="host__picture" />
+      <img src={host.picture} alt={host.name} />
+      <p>{host.name}</p>
     </div>
   );
 };
 
 Host.propTypes = {
-  name: PropTypes.string.isRequired,
-  picture: PropTypes.string.isRequired,
+  host: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    picture: PropTypes.string.isRequired,
+  }).isRequired,
 };
 
 export default Host;

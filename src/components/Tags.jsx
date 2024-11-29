@@ -3,11 +3,11 @@ import PropTypes from "prop-types";
 
 const Tags = ({ tags }) => {
   return (
-    <div className="tagsContainer">
-      {tags.map((item) => (
-        <div key={item} className="tagsContainer__tag">
-          {item}
-        </div>
+    <div className="tags">
+      {tags.map((tag, index) => (
+        <span key={index} className="tag">
+          {tag}
+        </span>
       ))}
     </div>
   );

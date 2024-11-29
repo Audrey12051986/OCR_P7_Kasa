@@ -25,7 +25,7 @@ export default AboutPage;*/
 import React from "react";
 import Banner from "../components/Banner";
 import Collapse from "../components/Collapse";
-import TextList from "../data/TextList.json";
+import TextList from "../data/text-list.json";
 import aboutBanner from "../assets/bannerAbout.png";
 
 const AboutPage = () => {

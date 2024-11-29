@@ -1,58 +1,57 @@
-import React from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
-const Caroussel = ({ slides }) => {
-  const [current, setCurrent] = useState(0); //je définie l'index du premier slide à 0
-  const length = slides.length; //longueur du tableau de slides
+const Carousel = ({ pictures }) => {
+  const [current, setCurrent] = useState(0);
+  const length = pictures.length;
 
-  /**Function pour l'image precedente */
-  const nextImage = () => {
-    setCurrent(current === length - 1 ? 0 : current + 1); // on repart au premier slide quand on arrive au dernier
-  };
-  /**Function pour l'image suivante */
-  const prevImage = () => {
-    setCurrent(current === 0 ? length - 1 : current - 1); // on repart au dernier slide quand on est au premier
-  };
-
-  if (!Array.isArray(slides) || slides.length <= 0) {
+  if (!Array.isArray(pictures) || pictures.length === 0) {
     return null;
   }
+
+  const nextImage = () => {
+    setCurrent(current === length - 1 ? 0 : current + 1);
+  };
+
+  const prevImage = () => {
+    setCurrent(current === 0 ? length - 1 : current - 1);
+  };
+
   return (
-    <section className="slide">
+    <section className="carousel">
       {length > 1 && (
-        <p className="left-Arrow" onClick={prevImage}>
-          <i className="fa-solid fa-chevron-left"></i>
-        </p>
+        <>
+          <button onClick={prevImage} className="carousel__button">
+            <FaChevronLeft size={24} />
+          </button>
+          <button onClick={nextImage} className="carousel__button">
+            <FaChevronRight size={24} />
+          </button>
+        </>
       )}
-      {length > 1 && (
-        <p className="right-Arrow" onClick={nextImage}>
-          <i className="fa-solid fa-chevron-right"></i>
-        </p>
-      )}
-      {slides.map((image, index) => {
-        return (
-          <div
-            key={index}
-            className={index === current ? "slider active" : "slider"}
-          >
-            {index === current && (
-              <img src={image} alt="img-appartement" className="slide__image" />
-            )}
-            {index === current && length > 1 && (
-              <span className="slider__number">
-                {current + 1}/{length}
-              </span>
-            )}
-          </div>
-        );
-      })}
+
+      {pictures.map((image, index) => (
+        <div
+          key={index}
+          className={`carousel__image ${
+            index === current ? "carousel__image--active" : ""
+          }`}
+        >
+          <img src={image} alt={`Vue ${index + 1}`} className="carousel__img" />
+          {length > 1 && (
+            <span className="carousel__counter">
+              {current + 1}/{length}
+            </span>
+          )}
+        </div>
+      ))}
     </section>
   );
 };
 
-// Validation de la prop 'slides' pour s'assurer qu'il s'agit d'une photo
-Caroussel.propTypes = {
-  rating: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+Carousel.propTypes = {
+  pictures: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
 
-export default Caroussel;
+export default Carousel;
