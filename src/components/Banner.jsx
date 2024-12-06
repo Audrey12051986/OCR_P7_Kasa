@@ -1,19 +1,3 @@
-/*import React from "react";
-//import homeBanner from "../assets/homeBanner.png";
-
-const Banner = ({ bannerLocation, children }) => {
-  return (
-    <section className={`banner banner--${bannerLocation}`}>
-      <div className="banner__container">{children}</div>
-    </section>
-  );
-};
-
-export default Banner;*/
-
-/*<img src={homeBanner} alt="Home Banner" />
-      <h1>Chez vous, partout et ailleurs</h1>;*/
-
 import React from "react";
 import PropTypes from "prop-types"; // N'oubliez pas d'importer PropTypes
 
@@ -34,11 +18,5 @@ Banner.propTypes = {
   text: PropTypes.string, // text est optionnel
   className: PropTypes.string, // className est optionnel
 };
-
-// Ajout des valeurs par défaut
-/*Banner.defaultProps = {
-  text: "",
-  className: "",
-};*/
 
 export default Banner;

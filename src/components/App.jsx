@@ -8,8 +8,6 @@ import Header from "./Header"; // Chemin correct vers Header
 import Footer from "./Footer";
 import "../styles/index.scss";
 
-/* <Route path="location/:id" element={<Location />} />*/
-
 function App() {
   return (
     <BrowserRouter>

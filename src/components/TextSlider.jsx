@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import PropTypes from "prop-types"; // Importation de PropTypes
 import { FaChevronUp, FaChevronDown } from "react-icons/fa";
 
-/**
+/*
  * Composant TextSlider affiche un titre et un texte/liste avec un bouton pour ouvrir/fermer.
  * @component
  * @param {Object} props

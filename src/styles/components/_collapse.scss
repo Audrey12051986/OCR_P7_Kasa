@@ -1,0 +1,45 @@
+.collapse {
+  margin: 0;
+  max-width: 1023px;
+
+  &__visible {
+    background: #ff6060;
+    border-radius: 5px;
+    padding: 10px 20px 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+
+    h2 {
+      color: white;
+      font-size: 24px;
+      font-weight: 500;
+      margin: 0;
+    }
+
+    .chevron {
+      width: 32px;
+      height: 32px;
+      transition: transform 0.3s ease;
+
+      &.rotated {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  &__toggle {
+    background: #f6f6f6;
+    border-radius: 0 0 5px 5px;
+    overflow: hidden;
+    transition: height 0.3s ease-in-out;
+
+    p {
+      padding: 20px;
+      color: black;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+  }
+}

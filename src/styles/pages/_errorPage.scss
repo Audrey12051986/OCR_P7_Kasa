@@ -1,14 +1,15 @@
 $primary-color: #ff6060;
 
 .error {
+  height: auto;
   display: flex;
   flex-direction: column;
-  gap: 139px;
+  gap: 95px;
   align-items: center;
   justify-content: center;
   text-align: center;
   color: $primary-color;
-  margin-top: 139px;
+  margin: 100px 0;
 
   &__title {
     font-size: 288px;
@@ -49,9 +50,8 @@ $primary-color: #ff6060;
   &__link {
     text-decoration-line: underline;
     font-weight: 500;
-    font-size: 26px;
+    font-size: 18px;
     color: black;
-    margin-bottom: 180px;
 
     /* @include mobile-only {
       font-size: 14px;

@@ -18,9 +18,9 @@ const Collapse = (props) => {
   }, []);
 
   return (
-    <div className={`collapse ${props.aboutStyle}`}>
+    <div className={`collapse ${props.style}`}>
       <div onClick={toggleState} className="collapse__visible">
-        <h2>{props.aboutTitle}</h2>
+        <h2>{props.title}</h2>
         <img
           className={toggle ? "chevron rotated" : "chevron"}
           src={Chevron}
@@ -32,7 +32,7 @@ const Collapse = (props) => {
         className={toggle ? "collapse__toggle animated" : "collapse__toggle"}
         style={{ height: toggle ? `${heightEl}` : "0px" }}
       >
-        <p aria-hidden={toggle ? "true" : "false"}>{props.aboutText}</p>
+        <p aria-hidden={toggle ? "true" : "false"}>{props.children}</p>
       </div>
     </div>
   );
@@ -40,16 +40,17 @@ const Collapse = (props) => {
 
 // Ajout de la validation des props
 Collapse.propTypes = {
-  aboutStyle: PropTypes.string.isRequired,
-  aboutTitle: PropTypes.string.isRequired,
-  aboutText: PropTypes.string.isRequired,
+  style: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  children: PropTypes.node,
+  //text: PropTypes.string.isRequired,
 };
 
 // Ajout de valeurs par défaut pour les props
 Collapse.defaultProps = {
-  aboutStyle: "",
-  aboutTitle: "",
-  aboutText: "",
+  style: "",
+  title: "",
+  //text: "",
 };
 
 export default Collapse;
