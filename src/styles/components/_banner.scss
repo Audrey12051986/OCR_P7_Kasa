@@ -1,9 +1,7 @@
-$white: #fff;
-
 .banner {
   position: relative;
   height: 223px;
-  width: 1240px;
+  width: 100%;
   border-radius: 25px;
   margin: 38px 0 0 0;
   overflow: hidden;
@@ -22,7 +20,7 @@ $white: #fff;
   }
 
   h1 {
-    color: $white;
+    color: #fff;
     font-size: 48px;
     font-weight: bold;
     text-align: center;

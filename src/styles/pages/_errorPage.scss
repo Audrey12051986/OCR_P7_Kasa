@@ -1,5 +1,3 @@
-$primary-color: #ff6060;
-
 .error {
   height: auto;
   display: flex;
@@ -8,7 +6,7 @@ $primary-color: #ff6060;
   align-items: center;
   justify-content: center;
   text-align: center;
-  color: $primary-color;
+  color: #ff6060;
   margin: 100px 0;
 
   &__title {
@@ -18,7 +16,7 @@ $primary-color: #ff6060;
     margin: 0;
     padding: 0;
     line-height: 1;
-    color: $primary-color;
+    color: #ff6060;
 
     /* @include mobile-only {
       font-size: 96px;

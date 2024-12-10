@@ -5,7 +5,7 @@ const Host = ({ host }) => {
   return (
     <div className="host">
       <img src={host.picture} alt={host.name} />
-      <p>{host.name}</p>
+      <p className="host__name">{host.name}</p>
     </div>
   );
 };
