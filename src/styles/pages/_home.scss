@@ -1,11 +1,23 @@
-//@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap");
-@import "../variables"; // Ajout de l'import des variables
-
 .home {
+  // Desktop version
+  @media (min-width: 1024px) {
+    width: 85%;
+    margin: 0 auto;
+  }
+
+  // Tablet version
+  @media (min-width: 768px) and (max-width: 1023px) {
+    width: 100%;
+  }
+
+  // Mobile version
+  @media (max-width: 767px) {
+    width: 100%;
+  }
+
   .cardsList {
     margin: 0 auto;
     padding: 38px 0 0 0;
-    // max-width: 1240px;
 
     &_gallery {
       display: grid;

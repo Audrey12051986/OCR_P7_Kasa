@@ -1,99 +1,27 @@
-// _aboutPage.scss
 .about-page {
-  max-width: 1240px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 40px;
+  // Desktop version
+  @media (min-width: 1024px) {
+    width: 85%;
+    margin: 0 auto;
+    justify-content: center;
+  }
+
+  // Tablet version
+  @media (min-width: 768px) and (max-width: 1023px) {
+    width: 100%;
+  }
+
+  // Mobile version
+  @media (max-width: 767px) {
+    width: 100%;
+  }
 
   &__content {
-    width: 1023px;
+    // width: 1023px;
     margin: 0;
     display: flex;
     flex-direction: column;
     gap: 30px;
-    margin-bottom: 38px;
+    margin: 40px 0;
   }
-
-  /* .collapse {
-    margin: 0;
-    max-width: 1023px;
-
-    &__visible {
-      background: $primary-color;
-      border-radius: 5px;
-      padding: 10px 20px 10px 15px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      cursor: pointer;
-
-      h2 {
-        color: white;
-        font-size: 24px;
-        font-weight: 500;
-        margin: 0;
-      }
-
-      .chevron {
-        width: 32px;
-        height: 32px;
-        transition: transform 0.3s ease;
-
-        &.rotated {
-          transform: rotate(180deg);
-        }
-      }
-    }
-
-    &__toggle {
-      background: #f6f6f6;
-      border-radius: 0 0 5px 5px;
-      overflow: hidden;
-      transition: height 0.3s ease-in-out;
-
-      p {
-        padding: 20px;
-        color: black;
-        font-size: 16px;
-        line-height: 1.5;
-      }
-    }
-  }*/
 }
-
-/*@media (max-width: 768px) {
-  .banner {
-    height: 180px;
-    margin: 10px 0;
-  }
-
-  .header {
-    padding: 20px;
-
-    &__logo {
-      height: 45px;
-    }
-
-    &__nav {
-      gap: 20px;
-
-      a {
-        font-size: 16px;
-      }
-    }
-  }
-
-  .about-page {
-    .collapse {
-      &__visible h2 {
-        font-size: 18px;
-      }
-
-      &__toggle p {
-        font-size: 16px;
-      }
-    }
-  }
-}*/

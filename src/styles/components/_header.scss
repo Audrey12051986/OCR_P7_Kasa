@@ -22,13 +22,21 @@
     }*/
   }
 
-  /* @include mobile-only {
-    padding: 20px;
+  // Desktop version
+  @media (min-width: 1024px) {
+    width: 85%;
+    margin: 0 auto;
   }
 
-  @include tablet-only {
-    padding: 50px;
-  }*/
+  // Tablet version
+  @media (min-width: 768px) and (max-width: 1023px) {
+    width: 100%;
+  }
+
+  // Mobile version
+  @media (max-width: 767px) {
+    width: 100%;
+  }
 
   nav {
     ul {
