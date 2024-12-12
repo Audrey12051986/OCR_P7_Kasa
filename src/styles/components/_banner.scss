@@ -27,18 +27,6 @@
     margin: 0;
     padding: 0 20px;
   }
-
-  // Styles spécifiques pour le banner de la page d'accueil
-  &--home {
-    background-size: cover;
-    background-position: center;
-  }
-
-  // Styles spécifiques pour le banner de la page à propos
-  &--about {
-    background-size: cover;
-    background-position: center;
-  }
 }
 
 // Desktop version
@@ -47,37 +35,23 @@
 
 // Tablet version
 @media (min-width: 768px) and (max-width: 1023px) {
-}
-
-// Mobile version
-/*@media (max-width: 767px) {
   .banner {
-    margin: 20px;
-    &__container {
-      .banner__title {
-        position: absolute;
-        top: 31px;
-        left: 16px;
-        height: 111px;
-        h1 {
-          color: #fff;
-          font-size: 24px;
-          font-weight: 700;
-          text-align: center;
-          margin: 0;
-          padding: 0 20px;
-        }
-      }
+    height: 180px;
+    width: 100%;
+    border-radius: 20px;
+    margin-top: 30px;
+
+    h1 {
+      font-size: 35px;
     }
   }
-}*/
+}
 
+// Mobil version
 @media (min-width: 320px) and (max-width: 767px) {
   .banner {
     height: 140px;
     width: 100%;
-    font-size: 14px;
-    line-height: 40px;
     border-radius: 10px;
     margin-top: 20px;
 
@@ -87,7 +61,7 @@
     h1 {
       position: absolute;
       left: 10px;
-      bottom: 31px;
+      bottom: 40px;
       text-align: left;
       width: 225px;
       font-size: 24px;
