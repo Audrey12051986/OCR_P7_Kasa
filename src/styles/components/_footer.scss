@@ -6,15 +6,11 @@
   justify-content: space-evenly;
   background-color: #000000;
   height: 209px;
-  //padding: 75px 0 0 0;
-
-  /* @include mobile-only {
-        margin-top: 50px;
-    }*/
 
   &__img {
     width: 125px;
     height: 40px;
+    align-content: center;
   }
 
   &__text {
@@ -22,10 +18,34 @@
     color: white;
     font-weight: 500;
     font-size: 24px;
+  }
+}
 
-    /*@include mobile-only {
-            font-size: 12px;
-            margin-bottom: 30px;
-        }*/
+// Tablet version
+@media (min-width: 768px) and (max-width: 1023px) {
+  .footer {
+    justify-content: center;
+    &__img {
+      align-self: center;
+    }
+
+    &__text {
+      font-weight: 500;
+      font-size: 17px;
+      padding-top: 20px;
+    }
+  }
+}
+
+// Mobile version
+@media (max-width: 767px) {
+  .footer {
+    justify-content: center;
+    &__text {
+      text-align: center;
+      width: 133px;
+      font-size: 12px;
+      padding-top: 20px;
+    }
   }
 }

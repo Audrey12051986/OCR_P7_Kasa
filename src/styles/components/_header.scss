@@ -8,10 +8,6 @@
   &__logo {
     height: 68px;
 
-    /*@include mobile-only {
-      height: 46px;
-    }*/
-
     &:hover {
       transform: scale(1.02);
       transition: all 0.5s ease-in-out;
@@ -56,7 +52,19 @@
 // Tablet version
 @media (min-width: 768px) and (max-width: 1023px) {
   .header {
-    width: 100%;
+    margin: 30px;
+
+    &__logo {
+      height: 50px;
+    }
+
+    nav {
+      ul {
+        display: flex;
+        font-size: 20px;
+        gap: 40px;
+      }
+    }
   }
 }
 
@@ -77,25 +85,3 @@
     }
   }
 }
-
-/*.navbar {
-  /*display: flex;
-  font-weight: 500;
-  font-size: 24px;
-  align-items: center;
-  gap: 55px;
-
-  @include mobile-only {
-    font-size: 12px;
-    text-transform: uppercase;
-    gap: 15px;
-  }
-
-  &__button {
-    color: $primary-color;
-
-    &--selected {
-      text-decoration-line: underline;
-    }
-  }
-}*/
