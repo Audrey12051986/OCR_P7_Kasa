@@ -1,20 +1,4 @@
 .home {
-  // Desktop version
-  @media (min-width: 1024px) {
-    width: 85%;
-    margin: 0 auto;
-  }
-
-  // Tablet version
-  @media (min-width: 768px) and (max-width: 1023px) {
-    width: 100%;
-  }
-
-  // Mobile version
-  @media (max-width: 767px) {
-    width: 100%;
-  }
-
   .cardsList {
     margin: 0 auto;
     padding: 38px 0 0 0;
@@ -71,22 +55,45 @@
   }
 }
 
-/*
-  @media (max-width: 768px) {
-    .gallery {
-      grid-template-columns: repeat(1, 1fr);
-      gap: 20px;
-      padding: 20px;
-    }
+// Desktop version
+@media (min-width: 1024px) {
+  .home {
+    width: 85%;
+    margin: 0 auto;
+  }
+}
 
-    .banner h1 {
-      font-size: 24px;
-      padding: 0 20px;
+// Tablet version
+@media (min-width: 768px) and (max-width: 1023px) {
+  .home {
+    width: 100%;
+    .cardsList {
+      &_gallery {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 50px;
+        padding: 50px;
+        background-color: #f6f6f6;
+        border-radius: 25px;
+      }
     }
   }
+}
 
-  @media (min-width: 769px) and (max-width: 1024px) {
-    .gallery {
-      grid-template-columns: repeat(2, 1fr);
+// Mobile version
+@media (max-width: 767px) {
+  .home {
+    //width: 100%;
+    padding: 0 20px;
+    .cardsList {
+      padding: 0;
+      &_gallery {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 22px;
+        padding: 25px 0;
+        background-color: transparent;
+      }
     }
-  }*/
+  }
+}

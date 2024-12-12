@@ -1,8 +1,10 @@
 .property-page {
+  width: 85%;
   display: flex;
   flex-direction: column;
-  margin: 50px;
-  //width: 1240px;
+  margin: 0 auto;
+  margin-top: 40px;
+  margin-bottom: 40px;
 
   .carousel {
     display: flex;
@@ -75,10 +77,9 @@
     justify-content: space-between;
     align-items: center;
     justify-content: space-between;
-    margin: 15px 0;
+    margin: 40px 0 25px 0;
 
     h1 {
-      //font-family: "Montserrat", serif;
       font-weight: 500;
       font-size: 36px;
       color: #ff6060;
@@ -86,6 +87,8 @@
     }
 
     p {
+      font-size: 18px;
+      font-weight: 500;
       margin: 5px 0 15px 0;
     }
 
@@ -97,7 +100,7 @@
       .tag {
         background-color: #ff6060;
         color: white;
-        padding: 0.25rem 1rem;
+        padding: 0.3rem 1.25rem;
         border-radius: 10px;
       }
     }
@@ -141,7 +144,7 @@
     display: flex;
     justify-content: space-between;
 
-    .collapse {
+    /*.collapse {
       border: 1px solid #f6f6f6;
       border-radius: 10px;
       width: 582px;
@@ -178,7 +181,7 @@
         overflow: hidden;
         transition: max-height 0.3s ease, padding 0.3s ease;
       }
-    }
+    }*/
   }
 }
 

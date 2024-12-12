@@ -34,7 +34,12 @@ const AboutPage = () => {
       <Banner image={aboutBanner} className="banner--about" />
       <div className="about-page__content">
         {TextList.map((rule, id) => (
-          <Collapse key={id} title={rule.title} style="about-style">
+          <Collapse
+            key={id}
+            title={rule.title}
+            style="about-style"
+            className=""
+          >
             {rule.text}
           </Collapse>
         ))}

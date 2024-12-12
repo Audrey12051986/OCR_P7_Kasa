@@ -7,7 +7,13 @@ const Banner = ({ image, text, className }) => {
       className={`banner ${className || ""}`}
       style={{ backgroundImage: `url(${image})` }}
     >
-      <div className="banner__container">{text && <h1>{text}</h1>}</div>
+      <div className="banner__container">
+        {text && (
+          <div className="banner__title">
+            <h1>{text}</h1>
+          </div>
+        )}
+      </div>
     </section>
   );
 };

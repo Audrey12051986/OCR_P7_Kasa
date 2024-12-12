@@ -42,11 +42,11 @@
   }
 }
 
-@mixin mobile-only {
+/*@mixin mobile-only {
   @media screen and (max-width: map-get($breakpoints, mobile)) {
     @content;
   }
-}
+}*/
 
 @mixin tablet-only {
   @media screen and (min-width: map-get($breakpoints, tablet)) and (max-width: map-get($breakpoints, desktop)) {
