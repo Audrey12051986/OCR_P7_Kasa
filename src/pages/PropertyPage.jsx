@@ -1,7 +1,9 @@
 import React from "react";
 import { useParams } from "react-router-dom";
+import { Navigate } from "react-router-dom";
 import logementsData from "../data/logements.json";
 
+//import ErrorPage from "../pages/ErrorPage";
 import Carousel from "../components/Carrousel";
 import Collapse from "../components/Collapse";
 import Host from "../components/Host";
@@ -13,7 +15,7 @@ const PropertyPage = () => {
   const { id } = useParams();
   const property = logementsData.find((l) => l.id === id);
   if (!property) {
-    return <div>Logement non trouvé</div>;
+    return <Navigate to="/error" replace />;
   }
 
   return (
@@ -31,8 +33,10 @@ const PropertyPage = () => {
         </div>
       </div>
       <div className="description-and-equipment">
-        <Collapse title="Description">{property.description}</Collapse>
-        <Collapse title="Équipements">
+        <Collapse title="Description" variant="property">
+          {property.description}
+        </Collapse>
+        <Collapse title="Équipements" variant="property">
           <ul>
             {property.equipments.map((eq) => (
               <li key={eq}>{eq}</li>

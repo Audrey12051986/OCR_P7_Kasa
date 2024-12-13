@@ -1,6 +1,7 @@
-.collapse {
+/*.collapse {
   &__visible {
     background: #ff6060;
+    height: 30px;
     border-radius: 5px;
     padding: 10px 20px 10px 15px;
     display: flex;
@@ -10,8 +11,8 @@
 
     h2 {
       color: white;
-      font-size: 24px;
-      font-weight: 500;
+      font-size: 13px;
+      font-weight: 700;
       margin: 0;
     }
 
@@ -22,6 +23,18 @@
 
       &.rotated {
         transform: rotate(180deg);
+      }
+    }
+  }
+
+  // Modification pour la page À propos
+  &.about-collapse {
+    &__visible {
+      height: 52px;
+
+      .about & h2 {
+        font-size: 24px;
+        font-weight: 700;
       }
     }
   }
@@ -38,5 +51,25 @@
       font-size: 16px;
       line-height: 1.5;
     }
+
+    // Modification pour la page À propos
+    .about & {
+      p {
+        font-size: 15px;
+      }
+    }
   }
 }
+
+// Desktop version
+@media (min-width: 1024px) {
+}
+
+// Tablet version
+@media (min-width: 768px) and (max-width: 1023px) {
+}
+
+// Mobile version
+@media (max-width: 767px) {
+}
+*/
