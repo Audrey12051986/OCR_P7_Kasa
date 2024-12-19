@@ -33,16 +33,20 @@ const PropertyPage = () => {
         </div>
       </div>
       <div className="description-and-equipment">
-        <Collapse title="Description" variant="property">
-          {property.description}
-        </Collapse>
-        <Collapse title="Équipements" variant="property">
-          <ul>
-            {property.equipments.map((eq) => (
-              <li key={eq}>{eq}</li>
-            ))}
-          </ul>
-        </Collapse>
+        <div>
+          <Collapse title="Description" variant="property">
+            {property.description}
+          </Collapse>
+        </div>
+        <div>
+          <Collapse title="Équipements" variant="property">
+            <ul>
+              {property.equipments.map((eq) => (
+                <li key={eq}>{eq}</li>
+              ))}
+            </ul>
+          </Collapse>
+        </div>
       </div>
     </div>
   );

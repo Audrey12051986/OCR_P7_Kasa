@@ -22,7 +22,7 @@ const Collapse = (props) => {
       <div onClick={toggleState} className="collapse__visible">
         <h2>{props.title}</h2>
         <img
-          className={toggle ? "chevron rotated" : "chevron"}
+          className={toggle ? "chevron" : "chevron rotated"}
           src={Chevron}
           alt="chevron"
         />

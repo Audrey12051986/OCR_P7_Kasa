@@ -22,6 +22,7 @@
       height: 100%;
       overflow: hidden;
       border-radius: 25px;
+      position: relative; // pour positionnement du compteur
     }
 
     &__image {
@@ -37,6 +38,21 @@
         border-radius: 25px;
         object-fit: cover;
       }
+    }
+
+    //style compteur
+    &__counter {
+      position: absolute;
+      left: 607px;
+      top: 357.67px;
+      width: 24px;
+      height: 32.4px;
+      color: #ffffff;
+      font-family: "Montserrat";
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 25.67px;
+      text-align: center;
     }
 
     &__controls {
@@ -89,7 +105,7 @@
     p {
       font-size: 18px;
       font-weight: 500;
-      margin: 5px 0 15px 0;
+      margin: 5px 0 20px 0;
     }
 
     .tags {
@@ -98,10 +114,15 @@
       gap: 0.5rem;
 
       .tag {
+        display: flex;
         background-color: #ff6060;
         color: white;
+        height: 25px;
         padding: 0.3rem 1.25rem;
         border-radius: 10px;
+        font-size: 14px;
+        font-weight: 700;
+        align-items: center;
       }
     }
 
@@ -143,143 +164,109 @@
   .description-and-equipment {
     display: flex;
     justify-content: space-between;
+    flex-direction: row;
+    gap: 75px;
 
-    /*.collapse {
-      border: 1px solid #f6f6f6;
-      border-radius: 10px;
-      width: 582px;
-      border-radius: 5px;
-
-      &.open {
-        .collapse-content {
-          max-height: 500px;
-          padding: 1rem 0;
-        }
-      }
-
-      .collapse-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        cursor: pointer;
-
-        h3 {
-          margin: 0;
-        }
-
-        .icon {
-          transition: transform 0.3s ease;
-
-          &.open {
-            transform: rotate(180deg);
-          }
-        }
-      }
-
-      .collapse-content {
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.3s ease, padding 0.3s ease;
-      }
-    }*/
+    div {
+      flex: 1;
+    }
   }
 }
 
 @media (max-width: 767px) {
-  .carousel {
-    height: 200px;
+  .property-page {
+    //margin: 25px 20px 40px;
+    width: 94%;
 
-    &__container {
-      border-radius: 10px;
-    }
+    .carousel {
+      height: 255px;
 
-    &__image__img {
-      border-radius: 10px;
-    }
-
-    &__controls {
-      padding: 0 10px;
-    }
-
-    &__button {
-      width: 48px;
-      height: 60px;
-      padding: 5px;
-
-      &--left {
-        left: 10px;
+      &__counter {
+        display: none;
       }
 
-      &--right {
-        right: 10px;
+      &__container {
+        border-radius: 10px;
       }
 
-      &--icon {
-        width: 23px;
-        height: 39.5px;
+      &__image__img {
+        border-radius: 10px;
       }
-    }
-  }
 
-  .property-info {
-    flex-direction: column;
-    align-items: flex-start;
-    margin: 10px 0;
+      &__controls {
+        padding: 0 10px;
+      }
 
-    h1 {
-      font-size: 24px;
-    }
+      &__button {
+        width: 48px;
+        height: 60px;
+        padding: 5px;
 
-    .tags {
-      gap: 0.25rem;
+        &--left {
+          left: 10px;
+        }
 
-      .tag {
-        padding: 0.125rem 0.5rem;
-        border-radius: 5px;
+        &--right {
+          right: 10px;
+        }
+
+        &--icon {
+          width: 23px;
+          height: 39.5px;
+        }
       }
     }
 
-    .rating-and-host {
-      flex-direction: row;
-      justify-content: space-between;
-      width: 100%;
-      margin-top: 10px;
+    .property-info {
+      flex-direction: column;
+      align-items: flex-start;
+      margin: 20px 0;
 
-      .host {
-        &__name {
-          font-size: 14px;
+      h1 {
+        font-size: 18px;
+      }
+
+      p {
+        font-size: 14px;
+        margin: 15px 0;
+      }
+
+      .tags {
+        gap: 0.25rem;
+
+        .tag {
+          padding: 0.125rem 0.5rem;
+          border-radius: 5px;
+        }
+      }
+
+      .rating-and-host {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        width: 100%;
+        margin-top: 20px;
+
+        .host {
+          &__name {
+            font-size: 12px;
+            width: auto;
+          }
+
+          img {
+            width: 32px;
+            height: 32px;
+          }
+        }
+
+        .rating__container {
           width: auto;
         }
-
-        img {
-          width: 32px;
-          height: 32px;
-        }
-      }
-
-      .rating__container {
-        width: auto;
       }
     }
-  }
 
-  .description-and-equipment {
-    flex-direction: column;
-
-    .collapse {
-      width: 100%;
-      border-radius: 5px;
-
-      .collapse-header {
-        h3 {
-          font-size: 16px;
-        }
-
-        .icon {
-          width: 24px;
-          height: 24px;
-        }
-      }
+    .description-and-equipment {
+      flex-direction: column;
+      gap: 30px;
     }
   }
 }

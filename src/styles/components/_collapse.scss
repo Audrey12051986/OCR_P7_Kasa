@@ -1,4 +1,4 @@
-/*.collapse {
+.collapse {
   &__visible {
     background: #ff6060;
     height: 30px;
@@ -11,7 +11,7 @@
 
     h2 {
       color: white;
-      font-size: 13px;
+      font-size: 18px;
       font-weight: 700;
       margin: 0;
     }
@@ -20,21 +20,10 @@
       width: 32px;
       height: 32px;
       transition: transform 0.3s ease;
+      transform: rotate(180deg);
 
       &.rotated {
-        transform: rotate(180deg);
-      }
-    }
-  }
-
-  // Modification pour la page À propos
-  &.about-collapse {
-    &__visible {
-      height: 52px;
-
-      .about & h2 {
-        font-size: 24px;
-        font-weight: 700;
+        transform: rotate(0deg);
       }
     }
   }
@@ -46,16 +35,36 @@
     transition: height 0.3s ease-in-out;
 
     p {
-      padding: 20px;
+      margin: 0;
+      padding: 10px 20px;
       color: black;
-      font-size: 16px;
+      font-size: 18px;
       line-height: 1.5;
     }
+  }
 
-    // Modification pour la page À propos
-    .about & {
+  // Modification pour la page À propos
+  .about-page & .collapse {
+    &__visible {
+      height: 52px;
+      gap: 30px;
+
+      h2 {
+        font-size: 24px;
+        font-weight: 700;
+      }
+
       p {
-        font-size: 15px;
+        color: black;
+        font-size: 28px;
+      }
+    }
+    &__toggle {
+      align-items: center;
+      margin: 0;
+      p {
+        font-size: 28px;
+        margin: 0;
       }
     }
   }
@@ -67,9 +76,62 @@
 
 // Tablet version
 @media (min-width: 768px) and (max-width: 1023px) {
+  .collapse {
+    .about-page & .collapse {
+      &__visible {
+        height: 30px;
+        gap: 20px;
+
+        h2 {
+          font-size: 18px;
+          font-weight: 700;
+        }
+
+        p {
+          color: black;
+          font-size: 13px;
+        }
+      }
+
+      &__toggle {
+        align-items: center;
+        margin: 0;
+
+        p {
+          font-size: 14px;
+          margin: 0;
+        }
+      }
+    }
+  }
 }
 
 // Mobile version
 @media (max-width: 767px) {
+  .collapse {
+    .about-page & .collapse {
+      &__visible {
+        height: 30px;
+        gap: 20px;
+
+        h2 {
+          font-size: 18px;
+          font-weight: 700;
+        }
+
+        p {
+          color: black;
+          font-size: 13px;
+        }
+      }
+      &__toggle {
+        align-items: center;
+        margin: 0;
+        p {
+          font-size: 14px;
+          margin: 0;
+        }
+      }
+    }
+  }
 }
-*/
