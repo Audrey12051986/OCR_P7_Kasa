@@ -3,7 +3,6 @@ import { useParams } from "react-router-dom";
 import { Navigate } from "react-router-dom";
 import logementsData from "../data/logements.json";
 
-//import ErrorPage from "../pages/ErrorPage";
 import Carousel from "../components/Carrousel";
 import Collapse from "../components/Collapse";
 import Host from "../components/Host";

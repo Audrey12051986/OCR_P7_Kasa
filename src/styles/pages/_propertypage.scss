@@ -145,7 +145,7 @@
           margin: 0;
           width: 93px;
           color: #ff6060;
-          text-align: end; /* Alignement à gauche */
+          text-align: end;
         }
 
         img {
@@ -175,7 +175,6 @@
 
 @media (max-width: 767px) {
   .property-page {
-    //margin: 25px 20px 40px;
     width: 94%;
 
     .carousel {

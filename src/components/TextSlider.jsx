@@ -2,15 +2,6 @@ import React, { useState } from "react";
 import PropTypes from "prop-types"; // Importation de PropTypes
 import { FaChevronUp, FaChevronDown } from "react-icons/fa";
 
-/*
- * Composant TextSlider affiche un titre et un texte/liste avec un bouton pour ouvrir/fermer.
- * @component
- * @param {Object} props
- * @param {string} props.page - La page sur laquelle le composant va être utilisé.
- * @param {string} props.title - Le titre du composant.
- * @param {string | string[]} props.text - Le contenu du composant, qui peut être du texte ou une liste de texte.
- * @returns {JSX.Element} - un composant dépliable
- */
 const TextSlider = ({ title, text }) => {
   const [isOpen, setIsOpen] = useState(false);
 

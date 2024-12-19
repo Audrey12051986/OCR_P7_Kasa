@@ -32,7 +32,7 @@ StarRating.propTypes = {
 
 // Valeur par défaut pour `rating` au cas où il ne serait pas fourni
 StarRating.defaultProps = {
-  rating: 1, // Vous pouvez définir ici la note par défaut, comme 0 ou une autre valeur adaptée
+  rating: 1,
 };
 
 export default StarRating;

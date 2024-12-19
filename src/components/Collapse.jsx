@@ -1,7 +1,7 @@
-import React from "react"; // Ajout de l'import React
+import React from "react";
 import { useState, useRef, useEffect } from "react";
 import Chevron from "../assets/arrow_bottom.png";
-import PropTypes from "prop-types"; // Ajout de PropTypes
+import PropTypes from "prop-types";
 
 const Collapse = (props) => {
   const [toggle, setToggle] = useState(false);
@@ -43,14 +43,12 @@ Collapse.propTypes = {
   style: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   children: PropTypes.node,
-  //text: PropTypes.string.isRequired,
 };
 
 // Ajout de valeurs par défaut pour les props
 Collapse.defaultProps = {
   style: "",
   title: "",
-  //text: "",
 };
 
 export default Collapse;

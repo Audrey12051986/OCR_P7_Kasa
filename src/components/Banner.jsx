@@ -1,5 +1,5 @@
 import React from "react";
-import PropTypes from "prop-types"; // N'oubliez pas d'importer PropTypes
+import PropTypes from "prop-types";
 
 const Banner = ({ image, text, className }) => {
   return (
@@ -21,8 +21,8 @@ const Banner = ({ image, text, className }) => {
 // Ajout de la validation des props
 Banner.propTypes = {
   image: PropTypes.string.isRequired,
-  text: PropTypes.string, // text est optionnel
-  className: PropTypes.string, // className est optionnel
+  text: PropTypes.string,
+  className: PropTypes.string,
 };
 
 export default Banner;
